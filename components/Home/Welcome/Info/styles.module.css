@@ -1,0 +1,33 @@
+#info {
+    margin: 25px 0;
+    max-width: 500px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.text {
+    font-size: 32px;
+    padding: 20px;
+    color: var(--color-gray);
+}
+
+.link {
+    display: inline-block;
+    font-size: 32px;
+    cursor: pointer;
+    border: none;
+    color: var(--color-gray);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--color-black);
+}
+
+#italy {
+    font-size: 54px;
+    padding: 10px;
+    color: #fff;
+    background-image: linear-gradient(to right, var(--color-italy-green), var(--color-italy-red));
+}

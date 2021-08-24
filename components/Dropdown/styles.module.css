@@ -1,0 +1,28 @@
+#dropdown {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+#icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-black);
+    pointer-events: none;
+    opacity: 1;
+    transition: .1s opacity, .1s transform;
+}
+
+#dropdown:hover #icon {
+    opacity: 0;
+    transform: translate(-50%, -25%);
+}
+
+.content {
+    position:absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+}

@@ -1,0 +1,50 @@
+#about {
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hideBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+#hideBtn i {
+    font-size: 25px;
+    color: var(--color-gray);
+    transition: .5s transform, .5s color;
+}
+
+#hideBtn:hover i {
+    color: white;
+    transform: translateY(5px);
+}
+
+.remarks {
+    font-size: 16px;
+    justify-self: end;
+    color: gray;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+#name {
+    display: block;
+    color: white;
+    font-size: 28px;
+    line-height: 56px;
+}
+
+#name i {
+    color: white;
+    text-decoration: underline;
+}
+
+#email {
+    color: white;
+    margin-left: 8px;
+}

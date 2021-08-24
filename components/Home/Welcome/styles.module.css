@@ -1,0 +1,89 @@
+#welcome {
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--innerHeight);
+    width: 100%;
+    padding: 50px 50px 25px 50px;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s min-height;
+}
+
+#flag {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#flag span {
+    position: absolute;
+    height: 100%;
+}
+
+#flag span:nth-of-type(1) {
+    width: 50%;
+    background-color: var(--color-italy-green);
+    animation: flagGreen 1s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--flag-progress) * -1s);
+}
+
+@keyframes flagGreen {
+    0% {transform: translateX(calc(-100% - 1px));}
+    100% {transform: translateX(0%);}
+}
+
+#flag span:nth-of-type(2){
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+    animation: flagWhite 1s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--flag-progress) * -1s);
+}
+
+@keyframes flagWhite {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+#flag span:nth-of-type(3) {
+    width: 50%;
+    background-color: var(--color-italy-red);
+    animation: flagRed 1s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--flag-progress) * -1s);
+}
+
+@keyframes flagRed {
+    0% {transform: translateX(200%);}
+    100% {transform: translateX(100%);}
+}
+
+@media (max-width: 900px) {
+    #flex {
+        padding: 25px 25px 12.5px 25px;
+    }
+
+    #flag {
+        position: relative;
+        height: 10px;
+    }
+}

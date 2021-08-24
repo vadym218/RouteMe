@@ -1,0 +1,16 @@
+{
+  "short_name": "RouteStory",
+  "name": "RS",
+  "description": "Learn more about the most iconical sights of the world",
+  "icons": [
+    {
+      "src": "./IT.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#663399",
+  "background_color": "#663399",
+  "start_url": "/",
+  "display": "standalone"
+}

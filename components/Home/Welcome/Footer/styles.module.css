@@ -1,0 +1,48 @@
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#exploreBtn {
+    cursor: pointer;
+    width: 50px;
+    padding-top: 3px;
+    line-height: 47px;
+    font-size: 45px;
+    text-align: center;
+    border: none;
+    border-radius: 16px;
+    background-color: #fff;
+    animation: exploreBtn 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#exploreBtn i {
+    color: var(--color-rainbow);
+    transition: var(--duration-rainbow) color;
+}
+
+@keyframes exploreBtn {
+    0% {transform: translateY(-5px);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(-5px);}
+}
+
+#source {
+    color: #fff;
+    width: 40px;
+    font-size: 40px;
+    opacity: .5;
+}
+
+#disclaimer {
+    display: block;
+    width: 40px;
+    opacity: .5;
+}
+
+#source:hover, #disclaimer:hover {
+    opacity: 1;
+}
