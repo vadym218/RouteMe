@@ -5,7 +5,7 @@ import Welcome from '../components/Home/Welcome'
 import Explore from '../components/Home/Explore'
 import About from '../components/Home/About'
 
-export default function Home() {
+export default function Home({ subjects, places }) {
   let hue = Math.floor(Math.random() * 359)
 
   const updateRainbow = (setHue) => {
@@ -69,17 +69,17 @@ export default function Home() {
       <meta name="description" content="Learn more about the most iconical sights of Italy" />
       </Head>
       <Welcome toggleAbout={toggleAbout} />
-      <Explore setExploreElements={setExploreElements} toggleAbout={toggleAbout} />
+      <Explore subjects={subjects} places={places} setExploreElements={setExploreElements} toggleAbout={toggleAbout} />
       <About toggleAbout={toggleAbout} />
     </>
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   try {
     return { props: {
-      places: await (await fetch('http://localhost:80/api/places')).json(),
-      subjects: await (await fetch('http://localhost:80/api/subjects')).json()
+      places: await (await fetch(`http://${context.req.headers.host}/api/places`)).json(),
+      subjects: await (await fetch(`http://${context.req.headers.host}/api/subjects`)).json()
     } }
   } catch (error) {
     console.log(error.message)

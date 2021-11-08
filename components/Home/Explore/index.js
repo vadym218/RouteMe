@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import styles from './styles.module.css'
 
-export default function Explore({setExploreElements, toggleAbout}) {
+export default function Explore({ subjects, places, setExploreElements, toggleAbout}) {
     useEffect(() => {
         setExploreElements(
             document.getElementById(styles.explore),
@@ -13,8 +13,16 @@ export default function Explore({setExploreElements, toggleAbout}) {
         <section id={styles.explore}>
             <div id={styles.content}>
                 <div id={styles.filter}>
-                    <div id={styles.subject}></div>
-                    <div id={styles.place}></div>
+                    <div id={styles.subject}>
+                        {
+                            subjects.map((subject) => subject.name)
+                        }
+                    </div>
+                    <div id={styles.place}>
+                        {
+                            places.map((place) => place.name)
+                        }
+                    </div>
                 </div>
                 <div id={styles.carousel}></div>
                 <div id={styles.shortcuts}>
