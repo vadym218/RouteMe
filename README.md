@@ -1,4 +1,4 @@
-# RouteStory
+# Tour guide app contept
 - Next.js
 - A bit of MongoDB
 
