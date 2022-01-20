@@ -1,4 +1,4 @@
-# Tour guide app contept
+# Route Story - Tour guide app prototype
 - Next.js
 - A bit of MongoDB
 
