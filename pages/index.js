@@ -78,8 +78,8 @@ export default function Home({ subjects, places }) {
 export async function getServerSideProps(context) {
   try {
     return { props: {
-      places: await (await fetch(`http://${context.req.headers.host}/api/places`)).json(),
-      subjects: await (await fetch(`http://${context.req.headers.host}/api/subjects`)).json()
+      places: [], //await (await fetch(`http://${context.req.headers.host}/api/places`)).json()
+      subjects: [], //await (await fetch(`http://${context.req.headers.host}/api/subjects`)).json()
     } }
   } catch (error) {
     console.log(error.message)

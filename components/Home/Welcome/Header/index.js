@@ -6,7 +6,6 @@ export default function Header({exploreClick, toggleAbout}) {
     const dropdownContent =
         <div id={styles.dropdownContent}>
             <img className={styles.dropdownFlag} src="/UA.svg" />
-            <img className={styles.dropdownFlag} src="/RU.svg" />
             <img className={styles.dropdownFlag} src="/UK.svg" />
         </div>
 
