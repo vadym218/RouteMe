@@ -1,16 +1,16 @@
 # Route Story - Tour guide app prototype
-- Next.js
-- A bit of MongoDB
+
+## Technologies:
+- Next
 - No UI libraries
+- A bit of MongoDB
 
-https://route-story.herokuapp.com/
-
-Gif from early no framework version bellow
-- animation
-- filter & url handling
-- rainbow background
-- scroll carousel
-- content menu
+## Features:
+- storing filter and scroll position in url
+- on-page-scroll carousel
 - OpenWeather API usage
+- complex animations
 
-![demo](demo.gif)
+![gif](demo.gif)
+
+*please, wait for gif load
